@@ -27,6 +27,11 @@ jobs:
           path: ~/artifacts
           destination: node-build
       - run:
+          command: npm run dev &
+          background: true
+      - run:
+          command: sleep 10
+      - run:
           command: npm install --global @percy/cli
       - run:
           command: npx percy exec -- npx cypress run
