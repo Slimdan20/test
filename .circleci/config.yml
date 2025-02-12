@@ -28,6 +28,10 @@ jobs:
       - run:
           command: sudo apt-get install -y xvfb
       - run:
+          command: Xvfb :99 -screen 0 1920x1080x24 &
+      - run:
+          command: export DISPLAY=:99
+      - run:
           command: npm install --global @percy/cli
       - run:
           command: npx percy exec -- npx cypress run
