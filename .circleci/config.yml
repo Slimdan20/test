@@ -27,7 +27,7 @@ jobs:
           path: ~/artifacts
           destination: node-build
       - run:
-          command: npm run dev &
+          command: npm run dev
           background: true
       - run:
           command: sleep 10
