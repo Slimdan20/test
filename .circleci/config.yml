@@ -5,8 +5,9 @@ orbs:
   node: circleci/node@5
 jobs:
   build-node:
+    docker:
+      - image: cypress/included:12.17.1
     # Build node project
-    executor: node/default
     steps:
       - checkout
       - node/install-packages:
