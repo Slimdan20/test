@@ -13,8 +13,6 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm install --save-dev cypress
-      - run:
           command: npx cypress --version
       - run:
           command: npm run build
