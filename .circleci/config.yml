@@ -36,7 +36,7 @@ jobs:
 
   preview_deployment:
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:20.8
     environment:
       VERCEL_ORG_ID: $VERCEL_ORG_ID
       VERCEL_PROJECT-ID: $VERCEL_PROJECT_ID
@@ -57,7 +57,7 @@ jobs:
 
   production_deployment:
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:20.8
     environment:
       VERCEL_ORG_ID: $VERCEL_ORG_ID
       VERCEL_PROJECT-ID: $VERCEL_PROJECT_ID
