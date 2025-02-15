@@ -7,7 +7,7 @@ jobs:
   build-node:
     docker:
       - image: cypress/included:12.17.1
-    # Build node project work
+    # Build node project
     steps:
       - checkout
       - node/install-packages:
